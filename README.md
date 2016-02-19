@@ -1,4 +1,4 @@
-Gnostyx DITA Demostration Documents
+Gnostyx DITA Demonstration Documents
 ===================================
 
 This project provides a set of DITA documents intended to support DITA demonstrations by providing realistic documents that demonstrate a wide variety of DITA features and use patterns. The base version of the documents were originally developed and contributed by Gnostyx Research (gnostyx.com). Additional variants demonstrating various ways of using keys have been developed Eliot Kimber.
@@ -31,7 +31,7 @@ The DITA Demonstration Collection provides a set of sample DITA files that are m
 
 The content has been created based on materials produced by various organizations with this content being modified to exclude proprietary details.
 
-The functional objective set for the content itself is that it should be "functionally realistic" without necessarily being a flawless description of an actual system. As a technical objective, the DITA markup is valid and inline with generally accepted DITA markup practices. As a further objective, the DITA markup intentionally includes a range of possible markup and content organization tactics, based on patterns encountered in real-world content sources.
+The functional objective set for the content itself is that it should be "functionally realistic" without necessarily being a flawless description of an actual system. As a technical objective, the DITA markup is valid and in line with generally accepted DITA markup practices. As a further objective, the DITA markup intentionally includes a range of possible markup and content organization tactics, based on patterns encountered in real-world content sources.
 
 The collection of instances provided as part of this collection is also intended to be broad enough to support the definition and execution of a number of useful demonstration scenarios.
 
@@ -49,7 +49,16 @@ One of the key target demonstration scenarios set for the _StormCluster_ collect
 Licensing Terms
 ---------------
 
-The DITA Demonstration Collection has been released under the Creative Commons Attribution-ShareAlike 4.0 International Public License (See [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)). This license essentially encourages others to use, adapt and extend the collection in ways that they see fit. This includes providing this content as part of a commercial offering, for example as reference files within a product tutorial. The only caveats that are introduced by the licensing terms are the obligations to acknowledge the source and to make adaptations and extensions available to the public on similar terms.
+Copyright 2015 Gnostyx Research Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+In line with this license, people are encouraged to use, adapt, extend, and distribute the collection in whatever ways that they see fit. This includes providing this content as part of a commercial offering, for example as reference files within a product tutorial. They are further encouraged, but not obligated, to make their adaptations and extensions available to the public on similar terms.
+
 
 Acknowledgements
 ----------------
