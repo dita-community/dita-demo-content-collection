@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "http://docs.oasis-open.org/dita/v1.2/OS/dtd/reference.dtd">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "http://docs.oasis-open.org/dita/v1.2/OS/dtd/reference.dtd">
 <reference id="product_warehouse_STA">
   <title>Product Name Variables</title>
   <shortdesc>Reused variable definitions.</shortdesc>
@@ -27,7 +27,8 @@
                                     <p><ph>Primary product name</ph></p>
                                 </entry>
                                 <entry>
-                                    <p><term id="ph_prodname">StormCluster</term></p>
+                                    <p><term
+                    id="ph_prodname">STA</term></p>
                                     <draft-comment>Change value here when primary
                                         product name changes. </draft-comment>
                                 </entry>

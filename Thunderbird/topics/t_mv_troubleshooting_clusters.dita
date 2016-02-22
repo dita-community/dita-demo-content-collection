@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"><task xml:lang="en-us" id="T_SC_TroubleshootingEntities">
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd"><task xml:lang="en-us" id="T_SC_TroubleshootingEntities">
   <title>Troubleshooting cluster reporting problems</title>
   <shortdesc>You can troubleshoot clusters using the <uicontrol>Diagnostic</uicontrol> tool.</shortdesc>
   <prolog>
       <metadata>
          <prodinfo>
-            <prodname><term conkeyref="r_productname_variables/ph_enduser"/></prodname>
+            <prodname><term conkeyref="productname_variables/ph_enduser"/></prodname>
             <vrmlist>
                <vrm version="1.1" release="GA" modification="b"/>
             </vrmlist>
          </prodinfo>
       </metadata>
       <metadata>
-         <keywords><indexterm><term conkeyref="r_productname_variables/ph_enduser"/><term conkeyref="r_productname_variables/ph_clustercontrol"/><indexterm>cluster reporting<indexterm>troubleshooting</indexterm></indexterm></indexterm></keywords>
+         <keywords><indexterm><term conkeyref="productname_variables/ph_enduser"/><term conkeyref="productname_variables/ph_clustercontrol"/><indexterm>cluster reporting<indexterm>troubleshooting</indexterm></indexterm></indexterm></keywords>
       </metadata>
   </prolog>
   <taskbody>

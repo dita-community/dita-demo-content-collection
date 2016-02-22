@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "reference.dtd">
 <reference id="reference_C06313BF166040BA9C8C4C15D553C8EF"> 
   <title>System notifications</title> 
   <shortdesc>Notifications regarding cluster activity.</shortdesc>
 	<prolog>
 		<metadata>
 			<keywords>
-				<indexterm><term conkeyref="r_productname_variables/ph_prodname"/><indexterm>system
+				<indexterm><term conkeyref="productname_variables/ph_prodname"/><indexterm>system
 						notifications</indexterm></indexterm>
 			</keywords>
 		</metadata>

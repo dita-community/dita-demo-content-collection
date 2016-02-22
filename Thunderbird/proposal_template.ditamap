@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA 1.3 Map//EN" "map.dtd">
 <map id="map_65EC78EE098944839E0FBDDE941D43BD">
   <title>Customer Proposal Template</title>
   <topicgroup props="STA" processing-role="resource-only">
@@ -17,6 +17,6 @@
     <topicref href="topics/c_architecture_overview.dita" navtitle="About capture file names"/>
   </topichead>
   <topichead navtitle="Standard RFP question responses">
-    <topicref href="topics/proposal_standard_responses.dita"/>
+    <topicref href="proposal_standard_responses.dita"/>
   </topichead>
 </map>

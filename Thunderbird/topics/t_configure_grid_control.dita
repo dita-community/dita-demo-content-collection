@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
 <task id="v4re539854">
     <title>Enabling grid control</title>
     <shortdesc>Enable grid control on a cluster to grant access to that cluster. This allows you to

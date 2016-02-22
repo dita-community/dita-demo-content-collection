@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA 1.3 Map//EN" "map.dtd">
 <map>
     <title>Admin Control Map</title>
   <topicgroup props="STA" processing-role="resource-only">
@@ -91,6 +91,6 @@
         <topicref href="topics/r_mv_system_notifications.dita"/>
         <topicref href="topics/r_mv_quickref_dataview.dita"/>
         <topicref href="topics/r_mv_quickref_health_indicators.dita"/>
-        <topicref href="topics/FAQ.dita"/>
+        <topicref href="FAQ.dita"/>
     </topichead>   
 </map>

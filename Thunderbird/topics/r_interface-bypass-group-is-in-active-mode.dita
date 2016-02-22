@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Composite//EN" "/SysSchema/dita/ditabase.dtd">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Composite//EN" "/SysSchema/dita/ditabase.dtd">
 <reference xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="i3199154" ditaarch:DITAArchVersion="1.1" domains="(topic ui-d) (topic hi-d) (topic pr-d) (topic sw-d)                          (topic ut-d) (topic indexing-d)" class="- topic/topic       reference/reference "><title class="- topic/title ">Interface bypass group is in active
 mode</title>
 <shortdesc class="- topic/shortdesc ">This alarm is cleared when the bypass group table operational

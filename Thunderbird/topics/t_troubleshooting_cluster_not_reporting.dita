@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
 <task id="troubleshooting_cluster_not_reporting">
     <title>Troubleshooting non-reporting clusters</title>
     <shortdesc>Immediate actions to take when a cluster is not

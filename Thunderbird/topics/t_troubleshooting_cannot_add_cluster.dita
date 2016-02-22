@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
 <task id="troubleshooting_cannot_add_cluster">
     <title>Troubleshooting the inability to add a cluster</title>
     <shortdesc>Immediate actions to take when a cluster cannot be added to <term

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
 <task id="v892342324">
     <title>Setting host preference</title>
     <shortdesc>Select the host(s) you want to run your jobs during job submission. </shortdesc>

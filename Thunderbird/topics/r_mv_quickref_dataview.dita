@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "reference.dtd">
 <reference id="r_mv_quickref_dataview_widget"> 
   <title>Quick reference: data views</title> 
   <shortdesc>Use the data views to see different metrics about your project.</shortdesc>
 	<prolog>
 		<metadata>
 			<keywords>
-				<indexterm><term conkeyref="r_productname_variables/ph_enduser"/><indexterm>data
+				<indexterm><term conkeyref="productname_variables/ph_enduser"/><indexterm>data
 					views</indexterm></indexterm>
 			</keywords>
 		</metadata>
