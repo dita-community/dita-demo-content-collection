@@ -1,6 +1,17 @@
 Gnostyx DITA Demostration Documents
 ===================================
 
+.h2 DITA 1.3 version
+
+This branch (dita-1.3) uses the DITA 1.3 vocabulary by
+specifying "DITA 1.3 " rather than "DITA " in the public IDs of the doctypes
+used in the files. These documents require the 2.x version of the DITA Open Toolkit
+or its equivalent in order to validate with the 1.3 grammars and have DITA 1.3 
+processing available.
+
+This version of the files reflects the Thunderbird-keys-reuse-only version of 
+the files from the master branch, updated to use the DITA 1.3 grammars.
+
 This project provides a set of DITA documents intended to support DITA demonstrations by providing realistic documents that demonstrate a wide variety of DITA features and use patterns. The base version of the documents were originally developed and contributed by Gnostyx Research (gnostyx.com). Additional variants demonstrating various ways of using keys have been developed Eliot Kimber.
 
 Guide to Scenarios
@@ -8,21 +19,6 @@ Guide to Scenarios
 
 An introduction to the DITA demonstration collection and a description of the maps and scenarios provided.
 
-Eliot Kimber Updates
---------------------
-
-I have updated this content set to add versions that use keys and key scopes (DITA 1.3)
-in ways that reflect various suggested or potential best practices.
-
-- Thunderbird-keys-reuse-only: Puts keys on all references to topics such that there is exactly one URI reference to each topic and each such reference has an associated key. In addition, every navigation topicref has a key. Resource-only keys are defined for all images and for all topics that are used two or more times within the different maps in the information set.
-
-If a topic is used exactly once across all the maps and that use is a navigation topicref (processing-role="normal") then putting a key on the navigation topicref satisfies the requirement to have both exactly one URI reference to the topic and a key associated with every topic. If the topic is used in two or more maps then a resource-only key definition is defined for the topic and put in a separate key definition map. The navigation topicrefs that use the topic refer to the resource-only key, not the the topic's URI.
-
-- Thunderbird-keys-all-resonly: Declares a resource-only key for every topic (and image). All navigation topicrefs have keys and use keyrefs to the topics they place in the publication structure. This version reflects the "resource-only key definitions for every topic" practice, which while useful may be more than many writing teams need or can realistically set up.
-
-In both of these versions of the content, cross references and content references are to always to keys: all references from topics to any kind of resource are key references, including all content references.
-
-For more background on these two key-using versions on the content, see "Reworking the User Guide Map" below.
 
 Introduction
 ------------
