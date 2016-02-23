@@ -1,7 +1,8 @@
 Gnostyx DITA Demostration Documents
 ===================================
 
-.h2 DITA 1.3 version
+DITA 1.3 version
+----------------
 
 This branch (dita-1.3) uses the DITA 1.3 vocabulary by
 specifying "DITA 1.3 " rather than "DITA " in the public IDs of the doctypes
