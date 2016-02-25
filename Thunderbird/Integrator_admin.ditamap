@@ -8,18 +8,16 @@
         <audience experiencelevel="expert" job="cluster_admin" type="admin"/>
     </bookmeta>
     <frontmatter>
-      <topicgroup props="STA" processing-role="resource-only">
-        <keydef keys="r_productname_variables" href="topics/r_productname_variables.dita" type="topic"
-          format="dita"/>    
-        <keydef keys="r_image_warehouse" href="topics/r_image_warehouse.dita" type="topic"
-          format="dita"/>   
-      </topicgroup>
-      <topicgroup props="STB" processing-role="resource-only">
-        <keydef keys="r_productname_variables" href="topics/r_productname_variables_2.dita" type="topic"
-          format="dita"/>    
-        <keydef keys="r_image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"
-          format="dita"/>   
-      </topicgroup>
+    <topicgroup product="STA" processing-role="resource-only">
+      <mapref href="Images/images-keys.ditamap"/>
+      <keydef keys="productname_variables r_productname_variables" href="topics/r_productname_variables.dita" type="topic"/>
+      <keydef keys="image_warehouse r_image_warehouse" href="topics/r_image_warehouse.dita" type="topic"/>
+    </topicgroup>
+    <topicgroup product="STB" processing-role="resource-only">
+      <mapref href="Images2/images2-keys.ditamap"/>
+      <keydef keys="productname_variables" href="topics/r_productname_variables_2.dita" type="topic"/>
+      <keydef keys="image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"/>
+    </topicgroup>
       <booklists>
             <toc/>
             <figurelist/>
