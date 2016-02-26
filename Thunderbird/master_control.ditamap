@@ -3,16 +3,28 @@
 <map>
     <title>Admin Control Map</title>
   <topicgroup props="STA" processing-role="resource-only">
-    <keydef keys="r_productname_variables" href="topics/r_productname_variables.dita" type="topic"
+    <keydef keys="r_productname_variables productname_variables" href="topics/r_productname_variables.dita" type="topic"
       format="dita"/>    
-    <keydef keys="r_image_warehouse" href="topics/r_image_warehouse.dita" type="topic"
-      format="dita"/>   
+    <keydef keys="r_image_warehouse image_warehouse" href="topics/r_image_warehouse.dita" type="topic"
+      format="dita"/>
+    <topicref
+      href="../../../workspace-dita-community/dita-demo-content-collection/Thunderbird-keys-reuse-only/Images/images-keys.ditamap"
+      format="ditamap"/>
+    <topicref
+      href="../../../workspace-dita-community/dita-demo-content-collection/Thunderbird-keys-reuse-only/Images2/images2-keys.ditamap"
+      format="ditamap"/>   
   </topicgroup>
   <topicgroup props="STB" processing-role="resource-only">
-    <keydef keys="r_productname_variables" href="topics/r_productname_variables_2.dita" type="topic"
+    <keydef keys="r_productname_variables productname_variables" href="topics/r_productname_variables_2.dita" type="topic"
       format="dita"/>    
-    <keydef keys="r_image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"
-      format="dita"/>   
+    <keydef keys="r_image_warehouse image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"
+      format="dita"/>
+    <topicref
+      href="../../../workspace-dita-community/dita-demo-content-collection/Thunderbird-keys-reuse-only/Images2/images2-keys.ditamap"
+      format="ditamap"/>
+    <topicref
+      href="../../../workspace-dita-community/dita-demo-content-collection/Thunderbird-keys-reuse-only/Images/images-keys.ditamap"
+      format="ditamap"/>   
   </topicgroup>
   <topichead navtitle="General Files">
         <topicref href="topics/c_guide_to_scenarios.dita"/>
@@ -25,7 +37,7 @@
         <topicref href="topics/c_security.dita"/>
         <topicref href="topics/c_ease_of_management.dita"/>
         <topicref href="topics/c_efficient_resources.dita"/>
-        <topicref href="topics/c_architecture_combined.dita"/>
+        <topicref href="topics/c_architecture_combined.dita" keys="architecture_combined"/>
         <topicref href="topics/c_components.dita"/>
         <topicref href="topics/r_supported_platforms.dita"/>
         <topicref href="topics/r_manage_clusters.dita"/>
@@ -91,6 +103,6 @@
         <topicref href="topics/r_mv_system_notifications.dita"/>
         <topicref href="topics/r_mv_quickref_dataview.dita"/>
         <topicref href="topics/r_mv_quickref_health_indicators.dita"/>
-        <topicref href="FAQ.dita"/>
+        <topicref keys="faq" href="topics/FAQ.dita"/>
     </topichead>   
 </map>

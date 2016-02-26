@@ -15,8 +15,8 @@
     </topicgroup>
     <topicgroup product="STB" processing-role="resource-only">
       <mapref href="Images2/images2-keys.ditamap"/>
-      <keydef keys="productname_variables" href="topics/r_productname_variables_2.dita" type="topic"/>
-      <keydef keys="image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"/>
+      <keydef keys="productname_variables r_productname_variables" href="topics/r_productname_variables_2.dita" type="topic"/>
+      <keydef keys="image_warehouse r_image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"/>
     </topicgroup>
       <booklists>
             <toc/>
