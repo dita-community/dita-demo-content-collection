@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
 <task id="v43593845">
     <title>Adding or editing clusters </title>
     <shortdesc>Clusters can be monitored once they are added to the console.</shortdesc>
