@@ -9,23 +9,27 @@
     </bookmeta>
     <frontmatter>
       <topicgroup props="STA" processing-role="resource-only">
-        <keydef keys="r_productname_variables" href="topics/r_productname_variables.dita" type="topic"
+        <keydef keys="r_productname_variables productname_variables" href="topics/r_productname_variables.dita" type="topic"
           format="dita"/>    
-        <keydef keys="r_image_warehouse" href="topics/r_image_warehouse.dita" type="topic"
-          format="dita"/>   
+        <keydef keys="r_image_warehouse image_warehouse" href="topics/r_image_warehouse.dita" type="topic"
+          format="dita"/>
+      <topicref href="Images/images-keys.ditamap" format="ditamap"/>
+      <topicref href="Images2/images2-keys.ditamap" format="ditamap"/>   
       </topicgroup>
       <topicgroup props="STB" processing-role="resource-only">
-        <keydef keys="r_productname_variables" href="topics/r_productname_variables_2.dita" type="topic"
+        <keydef keys="r_productname_variables productname_variables" href="topics/r_productname_variables_2.dita" type="topic"
           format="dita"/>    
-        <keydef keys="r_image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"
-          format="dita"/>   
+        <keydef keys="r_image_warehouse image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"
+          format="dita"/>
+      <topicref href="Images/images-keys.ditamap" format="ditamap"/>
+      <topicref href="Images2/images2-keys.ditamap" format="ditamap"/>   
       </topicgroup>
       <booklists>
             <toc/>
             <figurelist/>
         </booklists>
     </frontmatter>
-    <chapter href="topics/c_architecture_combined.dita">
+    <chapter keys="architecture_combined" href="topics/c_architecture_combined.dita">
         <topicref href="topics/c_architecture_overview.dita"/>
         <topicref href="topics/c_product_about.dita"/>
         <topicref href="topics/c_security.dita"/>
