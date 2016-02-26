@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine
+FROM java:8
 MAINTAINER Eliot Kimber "ekimber@contrext.com"
 # Defines a data volume container for the DITA Demo 
 # Content collection ("Thunderbird").
@@ -10,7 +10,6 @@ RUN mkdir -p /opt/dita-community/data
 WORKDIR /opt/dita-community/data
 COPY Thunderbird ./Thunderbird
 WORKDIR /opt/dita-community/data/Thunderbird
-RUN apk add --no-cache git
 RUN git init && \
     git config --global user.email "thunderbird@dita-community.org" && \
     git config --global user.name "Thunderbird" &&\
