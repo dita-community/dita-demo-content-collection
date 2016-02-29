@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+    <booktitle>
+        <mainbooktitle>Integrator Administrator Guide</mainbooktitle>
+    </booktitle>
+    <bookmeta>
+        <audience experiencelevel="expert" job="cluster_admin" type="admin"/>
+    </bookmeta>
+    <frontmatter>
+      <topicgroup props="STA" processing-role="resource-only">
+        <keydef keys="r_productname_variables productname_variables" href="jp/topics/r_productname_variables.dita" type="topic"
+          format="dita"/>    
+        <keydef keys="r_image_warehouse image_warehouse" href="jp/topics/r_image_warehouse.dita" type="topic"
+          format="dita"/>
+        <topicref href="jp/Images/images-keys.ditamap" format="ditamap"/>
+        <topicref href="jp/Images2/images2-keys.ditamap" format="ditamap"/>   
+        <topicref href="en/Images/images-keys.ditamap" format="ditamap"/>
+      <topicref href="en/Images2/images2-keys.ditamap" format="ditamap"/>   
+      </topicgroup>
+      <topicgroup props="STB" processing-role="resource-only">
+        <keydef keys="r_productname_variables productname_variables" href="jp/topics/r_productname_variables_2.dita" type="topic"
+          format="dita"/>    
+        <keydef keys="r_image_warehouse image_warehouse" href="jp/topics/r_image_warehouse_2.dita" type="topic"
+          format="dita"/>
+      <topicref href="jp/Images/images-keys.ditamap" format="ditamap"/>
+      <topicref href="jp/Images2/images2-keys.ditamap" format="ditamap"/>   
+        <topicref href="en/Images/images-keys.ditamap" format="ditamap"/>
+        <topicref href="en/Images2/images2-keys.ditamap" format="ditamap"/>   
+      </topicgroup>
+    <topicgroup>
+      <topicmeta>
+        <navtitle>External Resource Key Definitions</navtitle>
+      </topicmeta>
+      <keydef href="http://www.acpi.info/spec10b.htm" format="html" scope="external"
+        keys="acpi-spec10">
+        <topicmeta>
+          <navtitle>http://www.acpi.info/spec10b.htm</navtitle>
+        </topicmeta>
+      </keydef>
+    </topicgroup>
+    <topicref href="jp/key-use-description.dita" keys="key-usage-strategy"/>
+      <booklists>
+            <toc/>
+            <figurelist/>
+        </booklists>
+    </frontmatter>
+    <chapter keys="architecture_combined" href="jp/topics/c_architecture_combined.dita">
+        <topicref keys="architecture_overview" href="jp/topics/c_architecture_overview.dita"/>
+        <topicref keys="product_about" href="jp/topics/c_product_about.dita"/>
+        <topicref keys="security" href="jp/topics/c_security.dita"/>
+        <topicref keys="ease_of_management" href="jp/topics/c_ease_of_management.dita"/>
+        <topicref keys="efficient_resources" href="jp/topics/c_efficient_resources.dita"/>
+    </chapter>
+    <chapter keys="activate" href="jp/topics/t_activate.dita" navtitle="Installation and Configuration">
+        <topicref keys="supported_platforms" href="jp/topics/r_supported_platforms.dita"/>
+        <topicref keys="add_cluster" href="jp/topics/t_add_cluster.dita"/>
+        <topicref keys="add_host_cluster_client" href="jp/topics/t_add_host_cluster_client.dita"/>
+        <topicref keys="set_host_preference" href="jp/topics/t_set_host_preference.dita"/>
+        <topicref keys="diverting_hosts" href="jp/topics/t_diverting_hosts.dita"/>
+        <topicref keys="view_edit_metadata" href="jp/topics/t_view_edit_metadata.dita"/>
+        <topicref keys="set_resource_definitions" href="jp/topics/t_set_resource_definitions.dita"/>
+        <topicref keys="registering_file" href="jp/topics/t_registering_file.dita"/>
+        <topicref keys="resource_files" href="jp/topics/r_resource_files.dita"/>
+        <topicref keys="configure_grid_control" href="jp/topics/t_configure_grid_control.dita"/>
+        <topicref keys="set_memory_limits" href="jp/topics/t_set_memory_limits.dita"/>
+        <topicref keys="set_timeout" href="jp/topics/t_set_timeout.dita"/>
+        <topicref keys="logical_drive" href="jp/topics/r_logical_drive.dita"/>
+        <topicref keys="physical_drive_not_faulted" href="jp/topics/r_physical_drive_not_faulted.dita"/>
+        <topicref keys="faulty_physical_drive" href="jp/topics/r_faulty_physical_drive.dita"/>
+        <topicref keys="troubleshooting_cluster_not_reporting" href="jp/topics/t_troubleshooting_cluster_not_reporting.dita"/>
+        <topicref keys="troubleshooting_cannot_add_cluster" href="jp/topics/t_troubleshooting_cannot_add_cluster.dita"/>
+    </chapter>
+    <chapter keys="cluster_management" href="jp/topics/c_cluster_management.dita">
+        <topicref keys="manage_clusters" href="jp/topics/r_manage_clusters.dita"/>
+        <topicref keys="cluster_management" href="jp/topics/c_cluster_management.dita" navtitle="Cluster management"/>
+        <topicref keys="configure_idle_detection" href="jp/topics/t_configure_idle_detection.dita"/>
+        <topicref keys="acknowledge_alert" href="jp/topics/t_acknowledge_alert.dita"/>
+        <topicref keys="cluster_reselection" href="jp/topics/c_cluster_reselection.dita"/>
+        <topicref keys="interface_drops" href="jp/topics/r_interface_drops.dita"/>
+        <topicref keys="interface-bypass-group-is-in-active-mode" href="jp/topics/r_interface-bypass-group-is-in-active-mode.dita"/>
+        <topicref keys="cluster_mgmt_commands" href="jp/topics/r_cluster_mgmt_commands.dita"/>
+        <topicref keys="cluster_capacity" href="jp/topics/c_cluster_capacity.dita">
+            <topicref keys="adding_classifiers" href="jp/topics/t_adding_classifiers.dita"/>
+            <topicref keys="creating_dynamic_tables" href="jp/topics/t_creating_dynamic_tables.dita"/>
+            <topicref keys="adding_columns_dynamic_table" href="jp/topics/t_adding_columns_dynamic_table.dita"/>
+            <topicref keys="creating_limiter" href="jp/topics/t_creating_limiter.dita"/>
+            <topicref keys="defining_subscriber_attributes" href="jp/topics/t_defining_subscriber_attributes.dita"/>
+            <topicref keys="dimensions_reports" href="jp/topics/r_dimensions_reports.dita"/>
+            <topicref keys="mv_analysis_columns" href="jp/topics/r_mv_analysis_columns.dita"/>
+            <topicref keys="mv_query_filters" href="jp/topics/r_mv_query_filters.dita"/>
+        </topicref>
+    </chapter>
+    <chapter keys="components" href="jp/topics/c_components.dita" navtitle="Advanced Topics in Component Interaction">
+        <topicref keys="resource_destinations" href="jp/topics/c_resource_destinations.dita"/>
+        <topicref keys="about_defining_payload" href="jp/topics/c_about_defining_payload.dita"/>
+        <topicref keys="bitrate" href="jp/topics/c_bitrate.dita"/>
+        <topicref keys="capture-files" href="jp/topics/c_capture-files.dita"/>
+        <topicref keys="command_foundation" href="jp/topics/c_command_foundation.dita">
+            <topicref keys="command_class" href="jp/topics/c_command_class.dita"/>
+            <topicref keys="attribute_parameter_syntax" href="jp/topics/c_attribute_parameter_syntax.dita"/>
+            <topicref keys="jobconf_description" href="jp/topics/c_jobconf_description.dita"/>
+            <topicref keys="jobconf" href="jp/topics/r_jobconf.dita"/>
+            <topicref keys="jtub_description" href="jp/topics/c_jtub_description.dita"/>
+            <topicref keys="jtub" href="jp/topics/r_jtub.dita"/>
+        </topicref>
+        <topicref keys="notification_templates" href="jp/topics/c_notification_templates.dita"/>
+    </chapter>
+    <backmatter>
+        <booklists>
+            <indexlist/>
+        </booklists>
+    </backmatter>
+    <reltable title="Reltable">
+        <relheader>
+            <relcolspec type="topic"/>
+            <relcolspec type="topic"/>
+        </relheader>
+        <relrow>
+            <relcell>
+                <topicref keyref="add_host_cluster_client"/>
+            </relcell>
+            <relcell>
+                <topicref keyref="set_memory_limits"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref keyref="manage_clusters"/>
+            </relcell>
+            <relcell>
+                <topicref keyref="cluster_mgmt_commands"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref keyref="manage_clusters"/>
+            </relcell>
+            <relcell>
+                <topicref keyref="view_edit_metadata"/>
+            </relcell>
+        </relrow>
+    </reltable>
+</bookmap>

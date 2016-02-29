@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_mwk_zfc_dv">
+  <title>Key Usage Strategy</title>
+  <body>
+    <p>This organization of the Thunderbird documents reflects the following key usage practices:<ol
+        id="ol_dt5_cgc_dv">
+        <li><p>This is necessary in order to enable reliable cross referencing and relationship
+            table linking to the topics using key references. This is true for two reasons:</p><ol
+            id="ol_qtr_ggc_dv">
+            <li>You should only ever use keys for refering to topics via cross reference (&lt;xref>)
+              and from relationship tables.</li>
+            <li>Only navigation (normal-role) topicrefs establish a unique use context for the
+              topic. If you refer or a resource-only key (e.g., as defined with the &lt;keydef>
+              element), then the topic, referenced using that key, has no defined position in the
+              publication structure and may not even be rendered at all.</li>
+          </ol>Every navigation (normal-role) topicref should have at least one key associated with
+          it.</li>
+        <li>For a given topic there is exactly one topicref that refers to it directly by URI in a
+          given map tree (meaning the tree of maps and submaps descending from the root map of the
+          map tree).<p>This ensures that if the location of the topic changes that you only have to
+            change that one reference in order to make all references to the topic work.</p></li>
+        <li>If a given topic is only used once in the map from a normal-role (navigation) topicref,
+          then that topicref is the only reference to the topic—there is no need to create a
+          separate resource-only topicref for the topic and then refer to that resource-only key
+          from the navigation topicref.<p>However, if a topic is used two or more times in the map
+            then there should be a resource-only keydef for the topic and each navigation topicref
+            should point to the resource-only key. This ensures that principle (2) is always
+            followed.</p></li>
+      </ol></p>
+    <p>This approach avoids the overhead of creating and maintaining separate resource-only
+      topicrefs for topics that are only ever used once in a given map. It seems like a reasonable
+      compromise between no key use and a rigid "have a resource-only topicref for every topic"
+      policy. </p>
+    <p>If you have a lot of reuse of topics, either within a single map or across maps, it may
+      actually be easier for everyone to use the more complete "one resource-only topicref for every
+      topic", with those keydefs shared across multiple publications. That approach implements a
+      more strict form of principle (2), namely that there should be exactly one
+      direct-URI-reference topicref for each topic across <b>all</b> maps, not just within a given
+      map tree. This approach is closer to what content management systems should do, where the CMS
+      can manage the task of creating and maintaining the key definitions themselves. For
+      manually-authored and managed maps, this stricter policy can be a bit of burden as it requires
+      that every new topic requires creating two topicrefs, the resource-only topicref with the
+      direct URI reference to the topic and the navigation topicref to the topic using the
+      resource-only key. But if a CMS is doing that for you, it's not a problem.</p>
+  </body>
+</topic>
