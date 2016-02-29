@@ -24,6 +24,7 @@
       <topicref href="Images/images-keys.ditamap" format="ditamap"/>
       <topicref href="Images2/images2-keys.ditamap" format="ditamap"/>   
       </topicgroup>
+    <topicref href="key-use-description.dita" keys="key-use-description"/>
       <booklists>
             <toc/>
             <figurelist/>
