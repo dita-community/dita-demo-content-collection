@@ -35,7 +35,7 @@
         </topicmeta>
       </keydef>
     </topicgroup>
-    <topicref href="key-use-description.dita" keys="key-use-description"/>
+    <topicref href="key-use-description.dita" keys="key-usage-strategy"/>
       <booklists>
             <toc/>
             <figurelist/>

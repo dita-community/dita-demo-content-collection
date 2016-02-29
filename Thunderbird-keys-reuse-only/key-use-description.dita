@@ -5,17 +5,17 @@
   <body>
     <p>This organization of the Thunderbird documents reflects the following key usage practices:<ol
         id="ol_dt5_cgc_dv">
-        <li>Every navigation (normal-role) topicref should have at least one key associated with
-            it.<p>This is necessary in order to enable reliable cross referencing and relationship
-            table linking to the topics using key references. This is true for two reasons:<ol
-              id="ol_qtr_ggc_dv">
-              <li>You should only ever use keys for refering to topics via cross reference
-                (&lt;xref>) and from relationship tables.</li>
-              <li>Only navigation (normal-role) topicrefs establish a unique use context for the
-                topic. If you refer or a resource-only key (e.g., as defined with the &lt;keydef>
-                element), then the topic, referenced using that key, has no defined position in the
-                publication structure and may not even be rendered at all.</li>
-            </ol></p></li>
+        <li><p>This is necessary in order to enable reliable cross referencing and relationship
+            table linking to the topics using key references. This is true for two reasons:</p><ol
+            id="ol_qtr_ggc_dv">
+            <li>You should only ever use keys for refering to topics via cross reference (&lt;xref>)
+              and from relationship tables.</li>
+            <li>Only navigation (normal-role) topicrefs establish a unique use context for the
+              topic. If you refer or a resource-only key (e.g., as defined with the &lt;keydef>
+              element), then the topic, referenced using that key, has no defined position in the
+              publication structure and may not even be rendered at all.</li>
+          </ol>Every navigation (normal-role) topicref should have at least one key associated with
+          it.</li>
         <li>For a given topic there is exactly one topicref that refers to it directly by URI in a
           given map tree (meaning the tree of maps and submaps descending from the root map of the
           map tree).<p>This ensures that if the location of the topic changes that you only have to

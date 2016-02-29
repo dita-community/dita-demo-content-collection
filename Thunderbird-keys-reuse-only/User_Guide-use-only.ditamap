@@ -46,6 +46,7 @@
         <topicref keys="mv_quickref_dataview" href="topics/r_mv_quickref_dataview.dita"/>
         <topicref keys="mv_quickref_health_indicators" href="topics/r_mv_quickref_health_indicators.dita"/>
     </topicref>
+  <topicref href="key-use-description.dita" keys="key-usage-strategy"/>
     
     <reltable title="See Also">
         <relheader>
