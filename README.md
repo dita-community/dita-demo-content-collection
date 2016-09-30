@@ -50,9 +50,9 @@ Licensing Terms
 
 Copyright 2015 Gnostyx Research Inc.
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at 
 
-http://www.apache.org/licenses/LICENSE-2.0
+[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.
 
@@ -91,7 +91,7 @@ Implementers may need to troubleshoot filenames and duplicate reference files fo
 Variables
 ---------
 
-Company, product, and features names are controlled through a central file: r\_productname\_variables.dita.
+Company, product, and features names are controlled through a central file: `r_productname_variables.dita`.
 
 When a company, product, or feature name is included in the content, it is placed in the target file as a conref or conkeyref from the central file (source).  This permits the values to be modified, or extended, whenever needed (if the company name changes, product name changes, or feature name changes).  Maintaining variables centrally is particularly useful in the case of a collection of test and demonstration instances because it should make it easy to change key names in order, for example, to reflect a particular organizations product names.  Implementers making use of the collection, or the team maintaining the collection, may wish to:
 
@@ -101,7 +101,7 @@ When a company, product, or feature name is included in the content, it is place
 
 -   Extend the content collection to support scenarios where two or more companies are contributing content to a combined product.
 
-In a similar fashion, an image warehouse topic (r\_image\_warehouse.dita) has been used to hold references to the images being used by the collection.
+In a similar fashion, an image warehouse topic (`r_image_warehouse.dita`) has been used to hold references to the images being used by the collection.
 
 Guide to the Maps
 -----------------
@@ -122,16 +122,9 @@ _Source: Thunderbird/c_guide_to_scenarios.dita_
 How the Key-Based Samples Were Created
 --------------------------------------
 
-The key-based samples were created from the original non-key-based
-(except for the conrefs to the warehouse topics) Thunderbird source.
-The keys were added by using regular expression search and replace
-with oXygenXML.  This was possible because the images and topics had
-filenames that were both globally unique within the information set
-and reflected patterns that worked well for keys.  In particular, the
-topic files all follow the naming pattern "{c|r|t}_{descriptive
-name}.dita".  This allowed use of the descriptive name part of the
-topic filename as the navigation key for each topic and the full
-filename (minus the extension) as the resource-only key.
+The key-based samples were created from the original non-key-based (except for the conrefs to the warehouse topics) Thunderbird source.  The keys were added by using regular expression search and replace with [oXygenXML Editor](https://www.oxygenxml.com/).  This was possible because the images and topics had filenames that were both globally unique within the information set and reflected patterns that worked well for keys.  In particular, the topic files all follow the naming pattern `{c|r|t}_{descriptive name}.dita`.  This allowed use of the descriptive name part of thetopic filename as the navigation key for each topic and the full filename (minus the extension) as the `resource-only` key.
+
+**NOTE:** While this project makes frequent references to *oXygenXML Editor*, it is not an absolute requirement.  It does, however, make a lot of things much easier when working with DITA projects.
 
 The process followed was roughly:
 
@@ -143,7 +136,7 @@ The process followed was roughly:
 
 4.  Rework the conditional topicgroups in the User Guide map to include the new image keydef maps.
 
-5.  Add @keys attributes to all the navigation topicrefs in all the navigation maps.  
+5.  Add @keys attributes to all the navigation topicrefs in all the navigation maps.
 
 4.  Use global search and replace to change all hrefs to keyrefs in all the topics.
 
@@ -151,46 +144,42 @@ The process followed was roughly:
 
 The basic technique is:
 
-**Step 1.** Capture the list of files in the image directory to a file.  On a unix-type operating system you can do this with "ls > files.txt".  There must be a Windows equivalent (or you can install the git Windows client and include the git command window, which provides a basic bash shell environment).
+**Step 1.** Capture the list of files in the image directory to a file.  On a unix-type operating system you can do this with `ls > files.txt`.  There must be a Windows equivalent (or you can install the git Windows client and include the git command window, which provides a basic bash shell environment).
 
 **Step 2.** Edit the files.txt file in oXygen and apply this regular expression 
 search and replace:
 
-~~~~
-	Find:
+Find:
+```postscript
+^(([^\.]+)\.(.+))$
+```
+Replace with:
 
-	^(([^\.]+)\.(.+))$
-
-	Replace with:
-
-	<keydef keys="$2" href="$1" format="$3">
-	 <topicmeta>
-	  <navtitle>$1</navtitle>
-	 </topicmeta>
-	</keydef>
-~~~~
+```xml
+<keydef keys="$2" href="$1" format="$3">
+ <topicmeta>
+  <navtitle>$1</navtitle>
+ </topicmeta>
+</keydef>
+```
  
-The regular expression matches each line of the file, capturing the
-whole line as group 1, the base filename as group 2, and the extension
-as group 3.
+The regular expression matches each line of the file, capturing the whole line as group 1, the base filename as group 2, and the extension as group 3.
 
-The navigation title is necessary because the key is bound to a
-non-DITA resource and thus needs an explicit navigation title.
+The navigation title is necessary because the key is bound to a non-DITA resource and thus needs an explicit navigation title.
 
-**Step 3.** Add the map DOCTYPE declaration and map start and end elements to make a complete map
-document.  You can copy the markup from the master_control.ditamap 
+**Step 3.** Add the map DOCTYPE declaration and map start and end elements to make a complete map document.  You can copy the markup from the master_control.ditamap 
 
-~~~~
-	<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-	<map>
-	  <title>Keydefs for Images/ directory</title>
-	  <topicgroup>
-		<topicmeta>
-		  <navtitle>Images/ directory</navtitle>
-		</topicmeta>
-~~~~
+```xml
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Keydefs for Images/ directory</title>
+  <topicgroup>
+	<topicmeta>
+	  <navtitle>Images/ directory</navtitle>
+	</topicmeta>
+```
 
-**Step 4.** Save the file as "keydefs-images.ditamap" in the Images/ directory
+**Step 4.** Save the file as `keydefs-images.ditamap` in the Images/ directory
 
 **Step 5.** Repeat for the Images2/ directory, calling the file keydefs-images2.ditamap.
 
@@ -205,24 +194,20 @@ of the graphics, so the two image keydef maps need to be included
 within the conditional topicgroups used to define keys for the
 variables and warehouse topics:
 
-~~~~
-	<topicgroup product="STA" processing-role="resource-only">
-	  <mapref href="Images/keydefs-images.ditamap"/>
-	  <mapref href="Images2/keydefs-images2.ditamap"/>
-	  <keydef keys="r_productname_variables" href="topics/r_productname_variables.dita" type="topic"
-		format="dita"/>    
-	  <keydef keys="r_image_warehouse" href="topics/r_image_warehouse.dita" type="topic"
-		format="dita"/>   
-	</topicgroup>
-	<topicgroup product="STB" processing-role="resource-only">
-	  <mapref href="Images2/keydefs-images2.ditamap"/>
-	  <mapref href="Images/keydefs-images.ditamap"/>
-	  <keydef keys="r_productname_variables" href="topics/r_productname_variables_2.dita" type="topic"
-		format="dita"/>    
-	  <keydef keys="r_image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"
-		format="dita"/>   
-	</topicgroup>
-~~~~
+```xml
+<topicgroup product="STA" processing-role="resource-only">
+  <mapref href="Images/keydefs-images.ditamap"/>
+  <mapref href="Images2/keydefs-images2.ditamap"/>
+  <keydef keys="r_productname_variables" href="topics/r_productname_variables.dita" type="topic" format="dita"/>
+  <keydef keys="r_image_warehouse" href="topics/r_image_warehouse.dita" type="topic" format="dita"/>
+</topicgroup>
+<topicgroup product="STB" processing-role="resource-only">
+  <mapref href="Images2/keydefs-images2.ditamap"/>
+  <mapref href="Images/keydefs-images.ditamap"/>
+  <keydef keys="r_productname_variables" href="topics/r_productname_variables_2.dita" type="topic" format="dita"/>
+  <keydef keys="r_image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic" format="dita"/>
+</topicgroup>
+```
 
 Note that both topic groups include both image keydef maps but in
 opposite orders.  This ensures that the product-specific key bindings
@@ -252,32 +237,32 @@ reflects the key name).
 This can be done with another regular expression search and replace applied to
 the navigation topicrefs in the map:
 
-~~~~
 Find:
-
-	(href="topics/[ctr]_([^\.]+))
-
+```perl
+(href="topics/[ctr]_([^\.]+))
+```
 Replace with:
 
-	keys="$2" $1
-
+```perl
+keys="$2" $1
+```
 XPath:
-
-	topichead//topicref
-~~~~
+```postscript
+topichead//topicref
+```
 
 The resulting topicrefs should look like this:
 
-~~~~
-    <topicref keys="mv_managing_messages" href="topics/c_mv_managing_messages.dita"/>
-~~~~
+```xml
+<topicref keys="mv_managing_messages" href="topics/c_mv_managing_messages.dita"/>
+```
 
 The XPath limits the change to only topicrefs under topichead ancestors, which
 prevents it from changing topicrefs in the relationship table, which we don't 
 want to do.
 
 There is one topic whose filename does not follow the pattern: FAQ.dita.
-I solved this problem by changing it's filename to "c_FAQ.dita" (even though
+I solved this problem by changing it's filename to `c_FAQ.dita` (even though
 the topic is a generic topic, it functions more or less as a concept) and just
 manually changed the topicref to add the @keys attribute with the value "FAQ".
 
@@ -289,19 +274,18 @@ these particular topicrefs.
 
 To change the reltable topicrefs use this regular expression search and replace:
 
-~~~~
 Find:
-
-    href="topics/[ctr]_([^\.]+).+?"
-
+```perl
+href="topics/[ctr]_([^\.]+).+?"
+```
 Replace with:
-
-    keyref="$1"
-
-XPath: 
-
-    reltable//topicref
-~~~~
+```perl
+keyref="$1"
+```
+XPath:
+```postscript
+reltable//topicref
+```
 
 If you've done this correctly, oXygen should not report any
 unresolvable key references in the map if the current map is selected
@@ -318,17 +302,17 @@ This is essentially the same regular expression search and replace
 used to update to the navigation topicrefs in the map, but applied to
 all the topic files using the oXygen project view.
 
-**Step 1.** Select the Project view in oXygen.  You should have already added the dita-demo-content-collection directory to it.  If you haven't, so so now.
+**Step 1.** Select the Project view in oXygen.  You should have already added the dita-demo-content-collection directory to it.  If you haven't, do so now.
 
-**Step 2.** In the Project view, navigate to the topics/ directory under the directory that contains the files you're modifying.  
+**Step 2.** In the Project view, navigate to the topics/ directory under the directory that contains the files you're modifying.
 
 **Step 3.** Right click on the topics/ directory and select "Find/Replace in files..."
 
 **Step 4.** For the "Text to find" field enter this regular expression:
 
-~~~~
-	href="\.\./Image[s]?/([^\.]+)\.[^"]+"
-~~~~
+```perl
+href="\.\./Image[s]?/([^\.]+)\.[^"]+"
+```
 
 If you do "Find all" now you can test the regular expression without
 worrying about making any changes.  Also, oXygen will remember the
@@ -337,9 +321,9 @@ be there for you.
 
 **Step 5.** For the "Replace with" field, enter:
 
-~~~~
-	keyref="$1"
-~~~~
+```perl
+keyref="$1"
+```
 
 **Step 6.** Make sure the "Regular expression" box is checked and the
 "Make backup files with extension" box is **unchecked**.  Since you're
@@ -355,9 +339,9 @@ create them).
 
 **Step 7.** In the "XPath" field enter:
 
-~~~~
-	image
-~~~~
+```postscript
+image
+```
 
 **Step 8.** Click "Replace All..."
 
@@ -377,22 +361,22 @@ The only remaining direct URI references are to external Web sites.  There's
 only a few of these and there's no easy way to translate arbitrary URLs into
 appropriate keys.
 
-I created a new empty map called "keydefs-external-web-sites.ditamap" to
+I created a new empty map called `keydefs-external-web-sites.ditamap` to
 hold the new keydefs and added a reference to that map from the User Guide
 map.
 
 I then did this search across all the topics:
 
-~~~~
-	href="
-~~~~
+```postscript
+href="
+```
 
-With an XPath of "xref" to find all the xrefs in all the topics.  
+With an XPath of `xref` to find all the xrefs in all the topics.
 
 From the search results I then just opened each topic to the xref,
 copied the @href attribute to a new keydef in the keydefs map, made up
-a key name, set the @scope attribute to "external" and the @format
-attribute "html", added an appropriate navigation title to the keydef
+a key name, set the @scope attribute to `external` and the @format
+attribute `html`, added an appropriate navigation title to the keydef
 for that Web site.
 
 On the original xref I replaced the @href attribute with @keyref
@@ -400,7 +384,7 @@ pointing to the key I just defined.
 
 With that task complete, the only URI references should be in map files,
 either on dedicated keydef elements or on navigation topicrefs to topics
-that are not reused.  You can check that by doing a search on "href=" across
+that are not reused.  You can check that by doing a search on `href=` across
 all the .dita and .ditamap files in the project.  You should only get hits
 on .ditamap files.
 
@@ -410,8 +394,8 @@ be done with an XQuery the operates on all the files in the project.
 
 With these changes made and validated against the User Guide map, it's
 then simply a matter of making the same updates to the other root maps
-(integrator_admin.ditamap, master_control.ditamap, and
-proposal_template.ditamap).
+(`integrator_admin.ditamap`, `master_control.ditamap`, and
+`proposal_template.ditamap`).
 
 I also changed the filename of the User Guide map to be different from
 the original just so that things generated from it would, by default,
@@ -437,37 +421,37 @@ intend to be root maps as "peer" maps.  This map then serves as an explicit
 declaration of "root map ness" and could be used, for example, as configuration
 for a CCMS or publication management system.
 
-In this example, I created the map "publication-set.ditamap":
+In this example, I created the map `publication-set.ditamap`:
 
-~~~~
-	<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-	<map>
-	 <title>Catalog of Publications</title>
-	  <topicmeta>   
-		<shortdesc>This map serves as a list of all the top-level
-		publication maps in the content set. Each map is referenced
-		using a peer-scope map ref. Per the DITA 1.3 rules, a peer-scope
-		map reference means "this map acts as a separate root map",
-		in this context, meaning "The root of a publication". This
-		map reflects DITA 1.2 and thus does not use the DITA 1.3 @keyscope
-		attribute. For DITA 1.3 it would make sense to also put a key scope
-		name on each publication, at least to establish the convention
-		for the scope name for that publication when used from other maps.
-		That would also allow this map to be used from any publication map
-		that wanted to enable links to any of the other publications.
-		</shortdesc>    
-	  </topicmeta>
-	  <topicgroup>
-		<mapref href="Integrator_admin.ditamap" scope="peer"/>
-		<mapref href="User_Guide-resonly-all-topics.ditamap" scope="peer"/>
-		<mapref href="master_control.ditamap" scope="peer"/>
-		<mapref href="proposal_template.ditamap" scope="peer"/>
-	  </topicgroup>
-	</map>
-~~~~
+```xml
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Catalog of Publications</title>
+  <topicmeta>
+	<shortdesc>This map serves as a list of all the top-level
+	publication maps in the content set. Each map is referenced
+	using a peer-scope map ref. Per the DITA 1.3 rules, a peer-scope
+	map reference means "this map acts as a separate root map",
+	in this context, meaning "The root of a publication". This
+	map reflects DITA 1.2 and thus does not use the DITA 1.3 @keyscope
+	attribute. For DITA 1.3 it would make sense to also put a key scope
+	name on each publication, at least to establish the convention
+	for the scope name for that publication when used from other maps.
+	That would also allow this map to be used from any publication map
+	that wanted to enable links to any of the other publications.
+	</shortdesc>
+  </topicmeta>
+  <topicgroup>
+	<mapref href="Integrator_admin.ditamap" scope="peer"/>
+	<mapref href="User_Guide-resonly-all-topics.ditamap" scope="peer"/>
+	<mapref href="master_control.ditamap" scope="peer"/>
+	<mapref href="proposal_template.ditamap" scope="peer"/>
+  </topicgroup>
+</map>
+```
 
-Note that the mapref elements all specify a @scope of "peer".  In DITA 1.3,
-setting the scope attribute to "peer" for a reference to a DITA map
+Note that the mapref elements all specify a @scope of `peer`.  In DITA 1.3,
+setting the scope attribute to `peer` for a reference to a DITA map
 explicitly means "the referenced map is a root map from the point of view of
 this map".  That's intended primarily to enable cross-deliverable linking 
 (by putting a key scope on the mapref) but it also serves to simply
