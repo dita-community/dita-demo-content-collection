@@ -157,17 +157,17 @@ The basic technique is:
 search and replace:
 
 ~~~~
-Find:
+	Find:
 
-^(([^\.]+)\.(.+))$
+	^(([^\.]+)\.(.+))$
 
-Replace with:
+	Replace with:
 
-<keydef keys="$2" href="$1" format="$3">
- <topicmeta>
-  <navtitle>$1</navtitle>
- </topicmeta>
-</keydef>
+	<keydef keys="$2" href="$1" format="$3">
+	 <topicmeta>
+	  <navtitle>$1</navtitle>
+	 </topicmeta>
+	</keydef>
 ~~~~
  
 The regular expression matches each line of the file, capturing the
@@ -181,13 +181,13 @@ non-DITA resource and thus needs an explicit navigation title.
 document.  You can copy the markup from the master_control.ditamap 
 
 ~~~~
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-  <title>Keydefs for Images/ directory</title>
-  <topicgroup>
-    <topicmeta>
-      <navtitle>Images/ directory</navtitle>
-    </topicmeta>
+	<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+	<map>
+	  <title>Keydefs for Images/ directory</title>
+	  <topicgroup>
+		<topicmeta>
+		  <navtitle>Images/ directory</navtitle>
+		</topicmeta>
 ~~~~
 
 **Step 4.** Save the file as "keydefs-images.ditamap" in the Images/ directory
@@ -206,22 +206,22 @@ within the conditional topicgroups used to define keys for the
 variables and warehouse topics:
 
 ~~~~
-<topicgroup product="STA" processing-role="resource-only">
-  <mapref href="Images/keydefs-images.ditamap"/>
-  <mapref href="Images2/keydefs-images2.ditamap"/>
-  <keydef keys="r_productname_variables" href="topics/r_productname_variables.dita" type="topic"
-    format="dita"/>    
-  <keydef keys="r_image_warehouse" href="topics/r_image_warehouse.dita" type="topic"
-    format="dita"/>   
-</topicgroup>
-<topicgroup product="STB" processing-role="resource-only">
-  <mapref href="Images2/keydefs-images2.ditamap"/>
-  <mapref href="Images/keydefs-images.ditamap"/>
-  <keydef keys="r_productname_variables" href="topics/r_productname_variables_2.dita" type="topic"
-    format="dita"/>    
-  <keydef keys="r_image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"
-    format="dita"/>   
-</topicgroup>
+	<topicgroup product="STA" processing-role="resource-only">
+	  <mapref href="Images/keydefs-images.ditamap"/>
+	  <mapref href="Images2/keydefs-images2.ditamap"/>
+	  <keydef keys="r_productname_variables" href="topics/r_productname_variables.dita" type="topic"
+		format="dita"/>    
+	  <keydef keys="r_image_warehouse" href="topics/r_image_warehouse.dita" type="topic"
+		format="dita"/>   
+	</topicgroup>
+	<topicgroup product="STB" processing-role="resource-only">
+	  <mapref href="Images2/keydefs-images2.ditamap"/>
+	  <mapref href="Images/keydefs-images.ditamap"/>
+	  <keydef keys="r_productname_variables" href="topics/r_productname_variables_2.dita" type="topic"
+		format="dita"/>    
+	  <keydef keys="r_image_warehouse" href="topics/r_image_warehouse_2.dita" type="topic"
+		format="dita"/>   
+	</topicgroup>
 ~~~~
 
 Note that both topic groups include both image keydef maps but in
@@ -255,21 +255,21 @@ the navigation topicrefs in the map:
 ~~~~
 Find:
 
-(href="topics/[ctr]_([^\.]+))
+	(href="topics/[ctr]_([^\.]+))
 
 Replace with:
 
-keys="$2" $1
+	keys="$2" $1
 
 XPath:
 
-topichead//topicref
+	topichead//topicref
 ~~~~
 
 The resulting topicrefs should look like this:
 
 ~~~~
-<topicref keys="mv_managing_messages" href="topics/c_mv_managing_messages.dita"/>
+    <topicref keys="mv_managing_messages" href="topics/c_mv_managing_messages.dita"/>
 ~~~~
 
 The XPath limits the change to only topicrefs under topichead ancestors, which
@@ -292,15 +292,15 @@ To change the reltable topicrefs use this regular expression search and replace:
 ~~~~
 Find:
 
-href="topics/[ctr]_([^\.]+).+?"
+    href="topics/[ctr]_([^\.]+).+?"
 
 Replace with:
 
-keyref="$1"
+    keyref="$1"
 
 XPath: 
 
-reltable//topicref
+    reltable//topicref
 ~~~~
 
 If you've done this correctly, oXygen should not report any
@@ -327,7 +327,7 @@ all the topic files using the oXygen project view.
 **Step 4.** For the "Text to find" field enter this regular expression:
 
 ~~~~
-href="\.\./Image[s]?/([^\.]+)\.[^"]+"
+	href="\.\./Image[s]?/([^\.]+)\.[^"]+"
 ~~~~
 
 If you do "Find all" now you can test the regular expression without
@@ -338,24 +338,25 @@ be there for you.
 **Step 5.** For the "Replace with" field, enter:
 
 ~~~~
-keyref="$1"
+	keyref="$1"
 ~~~~
 
 **Step 6.** Make sure the "Regular expression" box is checked and the
-"Make backup files with extension" box is **unchecked**.  Because
-you're using a git repository you shouldn't need to worry about
-backups.  Rather, you can commit your current changes before making
-the global search and replace, making it easy to revert back to a good
-state or, if you want to be really disciplined about it, create a new
-temporary ("feature") branch just for this search and replace.  With
-git in use, the backup files just cause annoyance.  (However, I've
-added .bak to the .gitignore file in this project so backup files will
-not be added to the repository if you do create them).
+"Make backup files with extension" box is **unchecked**.  Since you're
+using a git repository you shouldn't need to worry about backups.
+Rather, you can commit your current changes before making the global
+search and replace, making it easy to revert back to a good state or,
+if you want to be really disciplined about it, create a new temporary
+("feature") branch just for this search and replace.  With git in use,
+the backup files just cause annoyance.  Consequently the .bak backup
+extension used by oXygen has been added to the .gitignore file in this
+project so backup files will not be added to the repository if you do
+create them).
 
 **Step 7.** In the "XPath" field enter:
 
 ~~~~
-image
+	image
 ~~~~
 
 **Step 8.** Click "Replace All..."
@@ -383,7 +384,7 @@ map.
 I then did this search across all the topics:
 
 ~~~~
-href="
+	href="
 ~~~~
 
 With an XPath of "xref" to find all the xrefs in all the topics.  
@@ -439,30 +440,30 @@ for a CCMS or publication management system.
 In this example, I created the map "publication-set.ditamap":
 
 ~~~~
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
- <title>Catalog of Publications</title>
-  <topicmeta>   
-    <shortdesc>This map serves as a list of all the top-level
-    publication maps in the content set. Each map is referenced
-    using a peer-scope map ref. Per the DITA 1.3 rules, a peer-scope
-    map reference means "this map acts as a separate root map",
-    in this context, meaning "The root of a publication". This
-    map reflects DITA 1.2 and thus does not use the DITA 1.3 @keyscope
-    attribute. For DITA 1.3 it would make sense to also put a key scope
-    name on each publication, at least to establish the convention
-    for the scope name for that publication when used from other maps.
-    That would also allow this map to be used from any publication map
-    that wanted to enable links to any of the other publications.
-    </shortdesc>    
-  </topicmeta>
-  <topicgroup>
-    <mapref href="Integrator_admin.ditamap" scope="peer"/>
-    <mapref href="User_Guide-resonly-all-topics.ditamap" scope="peer"/>
-    <mapref href="master_control.ditamap" scope="peer"/>
-    <mapref href="proposal_template.ditamap" scope="peer"/>
-  </topicgroup>
-</map>
+	<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+	<map>
+	 <title>Catalog of Publications</title>
+	  <topicmeta>   
+		<shortdesc>This map serves as a list of all the top-level
+		publication maps in the content set. Each map is referenced
+		using a peer-scope map ref. Per the DITA 1.3 rules, a peer-scope
+		map reference means "this map acts as a separate root map",
+		in this context, meaning "The root of a publication". This
+		map reflects DITA 1.2 and thus does not use the DITA 1.3 @keyscope
+		attribute. For DITA 1.3 it would make sense to also put a key scope
+		name on each publication, at least to establish the convention
+		for the scope name for that publication when used from other maps.
+		That would also allow this map to be used from any publication map
+		that wanted to enable links to any of the other publications.
+		</shortdesc>    
+	  </topicmeta>
+	  <topicgroup>
+		<mapref href="Integrator_admin.ditamap" scope="peer"/>
+		<mapref href="User_Guide-resonly-all-topics.ditamap" scope="peer"/>
+		<mapref href="master_control.ditamap" scope="peer"/>
+		<mapref href="proposal_template.ditamap" scope="peer"/>
+	  </topicgroup>
+	</map>
 ~~~~
 
 Note that the mapref elements all specify a @scope of "peer".  In DITA 1.3,
