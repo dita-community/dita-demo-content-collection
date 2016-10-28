@@ -1,3 +1,8 @@
 Thunderbird-scratch/
 files.txt
 .bak
+*/out/*
+*/temp/*
+*/d3temp/*
+*/output/*
+*backup.*
